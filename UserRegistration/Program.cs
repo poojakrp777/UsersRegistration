@@ -22,6 +22,9 @@ namespace UserRegistration
             Console.WriteLine("Enter the last name = ");
             string lastName = Console.ReadLine();
             Console.WriteLine(userRegister.validateLastName(lastName));
+            Console.WriteLine("Enter the email = ");
+            string email = Console.ReadLine();
+            Console.WriteLine(userRegister.validateEmail(email));
             Console.ReadLine();
         }
     }
