@@ -23,5 +23,15 @@ namespace UserRegistration
         {
             return Regex.IsMatch(email, EMAIL_PATTERN);
         }
+        public static string MOBILENOFORMAT_PATTERN = "^[0-9]{2}[ ][0-9]{10}$";
+        public bool validateMobileNoFormat(String mobileNoFormat)
+        {
+            return Regex.IsMatch(mobileNoFormat, MOBILENOFORMAT_PATTERN);
+        }
+        public static string PASSWORD_PATTERN = "^[0-9a-zA-Z]{8,}";
+        public bool validatePassword(String password)
+        {
+            return Regex.IsMatch(password, PASSWORD_PATTERN);
+        }
     }
 }

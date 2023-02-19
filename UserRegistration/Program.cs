@@ -13,18 +13,27 @@ namespace UserRegistration
         {
             Console.WriteLine("Welcome to User registration validation");
 
+            UserRegister userRegister = new UserRegister();
             Console.WriteLine("Note: First name starts with Cap and has minimun 3 characters");
             Console.WriteLine("Enter the first name");
             string firstName = Console.ReadLine();
-
-            UserRegister userRegister = new UserRegister();
             Console.WriteLine(userRegister.validateFirstName(firstName));
+
             Console.WriteLine("Enter the last name = ");
             string lastName = Console.ReadLine();
             Console.WriteLine(userRegister.validateLastName(lastName));
+
             Console.WriteLine("Enter the email = ");
             string email = Console.ReadLine();
             Console.WriteLine(userRegister.validateEmail(email));
+
+            Console.WriteLine("Enter the mobile no format = ");
+            string mobileNoFormat = Console.ReadLine();
+            Console.WriteLine(userRegister.validateMobileNoFormat(mobileNoFormat));
+
+            Console.WriteLine("Enter the password = ");
+            string password = Console.ReadLine();
+            Console.WriteLine(userRegister.validatePassword(password));
             Console.ReadLine();
         }
     }
