@@ -12,13 +12,16 @@ namespace UserRegistration
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to User registration validation");
-            Console.WriteLine("Note: First name starts with Cap and has minimun 3 characters");
 
+            Console.WriteLine("Note: First name starts with Cap and has minimun 3 characters");
             Console.WriteLine("Enter the first name");
             string firstName = Console.ReadLine();
 
             UserRegister userRegister = new UserRegister();
             Console.WriteLine(userRegister.validateFirstName(firstName));
+            Console.WriteLine("Enter the last name = ");
+            string lastName = Console.ReadLine();
+            Console.WriteLine(userRegister.validateLastName(lastName));
             Console.ReadLine();
         }
     }
