@@ -31,9 +31,6 @@ namespace UserRegistration
             string mobileNoFormat = Console.ReadLine();
             Console.WriteLine(userRegister.validateMobileNoFormat(mobileNoFormat));
 
-            Console.WriteLine("Enter the password = ");
-            string password = Console.ReadLine();
-            Console.WriteLine(userRegister.validatePassword(password));
             Console.ReadLine();
         }
     }
