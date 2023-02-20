@@ -28,7 +28,7 @@ namespace UserRegistration
         {
             return Regex.IsMatch(mobileNoFormat, MOBILENOFORMAT_PATTERN);
         }
-        public static string PASSWORD_PATTERN = "^[0-9a-zA-Z]{8,}";
+        public static string PASSWORD_PATTERN = "^[A-Z]{1}[a-z]{7,}";
         public bool validatePassword(String password)
         {
             return Regex.IsMatch(password, PASSWORD_PATTERN);
