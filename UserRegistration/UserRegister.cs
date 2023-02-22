@@ -18,7 +18,7 @@ namespace UserRegistration
         {
             return Regex.IsMatch(lastName, NAME_PATTERN);
         }
-        public static string EMAIL_PATTERN = "^[a-z]{3,}[1-9]{1,4}[@][a-z]{4,}[.][a-z]{3,}$";
+        public static string EMAIL_PATTERN = @"^[A-Za-z0-9]{3,}([\.\-\+][A-Za-z0-9]{3,})?[@][a-zA-Z0-9]{1,}[.][a-zA-Z]{2,}([.][a-zA-Z]{2,})?$";
         public bool validateEmail(String email)
         {
             return Regex.IsMatch(email, EMAIL_PATTERN);
