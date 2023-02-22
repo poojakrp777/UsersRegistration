@@ -135,5 +135,20 @@ namespace User_Registration_Using_MSTest
             //Assert
             Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void GivenParameterizedTest_ToCheckValidMultipleEntries_ReturnEntryIsSucessful()
+        {
+            RegistrationCheck registrationCheck = new RegistrationCheck();
+            var result = registrationCheck.CheckMultipleEntriesOfEmail("abc@yahoo.com", "abc-100@yahoo.com", "abc@gmail.com.com", "abc+100@gmail.com", "abc@1.com");
+            Assert.AreEqual(result, "Entry is successful");
+        }
+
+        [TestMethod]
+        public void GivenParameterizedTest_ToCheckInvalidMultipleEntries_ReturnEntryIsNotSucessful()
+        {
+            RegistrationCheck registrationCheck = new RegistrationCheck();
+            var result = registrationCheck.CheckMultipleEntriesOfEmail("abc", "abc123@gmail.a", "abc@.com.my", "abc123@.com", "abc123@.com.com");
+            Assert.AreEqual(result, "Entry is not successful");
+        }
     }
 }
